@@ -83,6 +83,175 @@
       </div>
     </header>
 
+    <!-- Action -->
+    <section id="action" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a
+              href=""
+              class="btn btn-primary btn-block"
+              data-toggle="modal"
+              data-target="#addPostModal"
+            >
+              <i class="fas fa-plus"></i> Add Post</a
+            >
+          </div>
+          <div class="col-md-3">
+            <a
+              href=""
+              class="btn btn-success btn-block"
+              data-toggle="modal"
+              data-target="#addCategoryModal"
+            >
+              <i class="fas fa-plus"></i> Add Category</a
+            >
+          </div>
+          <div class="col-md-3">
+            <a
+              href=""
+              class="btn btn-warning btn-block"
+              data-toggle="modal"
+              data-target="#addUser"
+            >
+              <i class="fas fa-plus"></i> Add User</a
+            >
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+
+    <!-- Add Post Modal -->
+    <div class="modal fade" id="addPostModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Add Post</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="title" class="form-control-label">Title</label>
+                <input type="text" id="title" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="category" class="form-control-label"
+                  >Category</label
+                >
+                <select name="" id="category" class="form-control">
+                  <option value="Web Development">Web Development</option>
+                  <option value="Tech Gadgets">Tech Gadgets</option>
+                  <option value="Business">Business</option>
+                  <option value="Health and Wellness"
+                    >Health and Wellness</option
+                  >
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="image">Upload Image</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="image" />
+                  <label for="image" class="custom-file-label"
+                    >Choose File</label
+                  >
+                </div>
+                <small class="text-muted">Max-Size 3mb</small>
+              </div>
+              <div class="form-group">
+                <label for="body">Body</label>
+                <textarea
+                  name="editor1"
+                  id="body"
+                  class="form-control"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Category Modal  -->
+    <div class="modal fade" id="addCategoryModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Add Post</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form-group">
+                <label for="title2" class="form-control-label">Title</label>
+                <input type="text" id="title2" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Modal -->
+    <div class="modal fade" id="addUser">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title">Add User</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form-group">
+                <label for="name" class="form-control-label">Name</label>
+                <input type="text" id="name" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-control-label">Email</label>
+                <input type="email" id="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="password" class="form-control-label"
+                  >Password</label
+                >
+                <input type="password" id="password" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="cpassword" class="form-control-label"
+                  >Confirm Password</label
+                >
+                <input type="password" id="cpassword" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- DO NOT USE SLIM VERSION OF JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -99,5 +268,10 @@
       integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+    <script>
+      // Get the current year for the copyright
+      CKEDITOR.replace("editor1");
+    </script>
   </body>
 </html>
